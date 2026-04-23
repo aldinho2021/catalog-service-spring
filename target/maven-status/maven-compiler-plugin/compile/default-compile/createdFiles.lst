@@ -1,0 +1,13 @@
+com\acme\catalog\domain\CatalogItem.class
+com\acme\catalog\application\port\in\CreateItemCommand.class
+com\acme\catalog\adapters\out\persistence\CatalogRepositoryAdapter.class
+com\acme\catalog\CatalogApplication.class
+com\acme\catalog\adapters\in\web\CatalogController$CatalogItemResponse.class
+com\acme\catalog\adapters\out\persistence\CatalogItemJpaRepository.class
+com\acme\catalog\adapters\in\web\CatalogController$CreateItemRequest.class
+com\acme\catalog\adapters\in\web\CatalogController.class
+com\acme\catalog\adapters\out\persistence\CatalogItemEntity.class
+com\acme\catalog\application\port\in\CatalogUseCase.class
+com\acme\catalog\application\port\out\CatalogRepository.class
+com\acme\catalog\application\usecase\CatalogService.class
+com\acme\catalog\application\usecase\ItemNotFoundException.class

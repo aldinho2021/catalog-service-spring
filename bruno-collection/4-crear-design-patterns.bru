@@ -1,0 +1,20 @@
+meta {
+  name: 4. Crear Design Patterns
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{baseUrl}}/api/v1/catalog
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "title": "Design Patterns",
+    "author": "Gang of Four",
+    "genre": "Technology",
+    "year": 1994
+  }
+}

@@ -1,0 +1,20 @@
+meta {
+  name: 3. Crear Clean Code
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{baseUrl}}/api/v1/catalog
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "title": "Clean Code",
+    "author": "Robert C. Martin",
+    "genre": "Technology",
+    "year": 2008
+  }
+}

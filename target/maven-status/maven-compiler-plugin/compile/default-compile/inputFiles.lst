@@ -1,0 +1,11 @@
+D:\aldo\catalog-service-spring\src\main\java\com\acme\catalog\adapters\out\persistence\CatalogItemEntity.java
+D:\aldo\catalog-service-spring\src\main\java\com\acme\catalog\application\port\in\CatalogUseCase.java
+D:\aldo\catalog-service-spring\src\main\java\com\acme\catalog\CatalogApplication.java
+D:\aldo\catalog-service-spring\src\main\java\com\acme\catalog\domain\CatalogItem.java
+D:\aldo\catalog-service-spring\src\main\java\com\acme\catalog\adapters\out\persistence\CatalogRepositoryAdapter.java
+D:\aldo\catalog-service-spring\src\main\java\com\acme\catalog\adapters\in\web\CatalogController.java
+D:\aldo\catalog-service-spring\src\main\java\com\acme\catalog\application\usecase\CatalogService.java
+D:\aldo\catalog-service-spring\src\main\java\com\acme\catalog\application\usecase\ItemNotFoundException.java
+D:\aldo\catalog-service-spring\src\main\java\com\acme\catalog\adapters\out\persistence\CatalogItemJpaRepository.java
+D:\aldo\catalog-service-spring\src\main\java\com\acme\catalog\application\port\in\CreateItemCommand.java
+D:\aldo\catalog-service-spring\src\main\java\com\acme\catalog\application\port\out\CatalogRepository.java
