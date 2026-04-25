@@ -13,7 +13,7 @@ import java.util.UUID;
 class CatalogItemEntity {
 
     @Id
-    @Column(columnDefinition = "uuid")
+    @Column(nullable = false, updatable = false, columnDefinition = "uuid")
     private UUID id;
 
     @Column(nullable = false)
@@ -30,7 +30,8 @@ class CatalogItemEntity {
 
     static CatalogItemEntity fromDomain(CatalogItem item) {
         CatalogItemEntity e = new CatalogItemEntity();
-        e.id = item.getId();
+        // Evita IdentifierGenerationException cuando llega id null
+        e.id = item.getId() != null ? item.getId() : UUID.randomUUID();
         e.title = item.getTitle();
         e.author = item.getAuthor();
         e.genre = item.getGenre();
@@ -42,4 +43,3 @@ class CatalogItemEntity {
         return new CatalogItem(id, title, author, genre, year);
     }
 }
-

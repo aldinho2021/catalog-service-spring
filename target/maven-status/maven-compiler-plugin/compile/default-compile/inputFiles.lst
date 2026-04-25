@@ -7,7 +7,9 @@ D:\aldo\catalog-service-spring\src\main\java\com\acme\catalog\adapters\out\persi
 D:\aldo\catalog-service-spring\src\main\java\com\acme\catalog\application\port\in\CreateItemCommand.java
 D:\aldo\catalog-service-spring\src\main\java\com\acme\catalog\adapters\in\kafka\UserCreatedConsumer.java
 D:\aldo\catalog-service-spring\src\main\java\com\acme\catalog\application\port\out\CatalogRepository.java
+D:\aldo\catalog-service-spring\src\main\java\com\acme\catalog\application\usecase\UserOnboardService.java
 D:\aldo\catalog-service-spring\src\main\java\com\acme\catalog\adapters\out\persistence\CatalogItemEntity.java
 D:\aldo\catalog-service-spring\src\main\java\com\acme\catalog\application\port\in\CatalogUseCase.java
 D:\aldo\catalog-service-spring\src\main\java\com\acme\catalog\adapters\out\persistence\CatalogRepositoryAdapter.java
 D:\aldo\catalog-service-spring\src\main\java\com\acme\catalog\adapters\in\web\CatalogController.java
+D:\aldo\catalog-service-spring\src\main\java\com\acme\catalog\application\port\in\UserOnboardUseCase.java

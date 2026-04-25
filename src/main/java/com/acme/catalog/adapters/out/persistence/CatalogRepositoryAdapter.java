@@ -2,6 +2,7 @@ package com.acme.catalog.adapters.out.persistence;
 
 import com.acme.catalog.application.port.out.CatalogRepository;
 import com.acme.catalog.domain.CatalogItem;
+import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -32,6 +33,7 @@ public class CatalogRepositoryAdapter implements CatalogRepository {
     }
 
     @Override
+    @Transactional
     public CatalogItem save(CatalogItem item) {
         return jpa.save(CatalogItemEntity.fromDomain(item)).toDomain();
     }
