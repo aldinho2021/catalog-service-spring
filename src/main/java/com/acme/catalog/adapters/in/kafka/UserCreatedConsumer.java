@@ -16,7 +16,7 @@ public class UserCreatedConsumer {
         this.userOnboardUseCase = userOnboardUseCase;
     }
 
-    @KafkaListener(topics = "user-created", groupId = "catalog-service")
+    /*@KafkaListener(topics = "user-created", groupId = "catalog-service")
     public void consume(String payload) {
         try {
             UserCreatedEvent event = objectMapper.readValue(payload, UserCreatedEvent.class);
@@ -25,5 +25,11 @@ public class UserCreatedConsumer {
         } catch (Exception e) {
             throw new RuntimeException("Error processing user-created event", e);
         }
+    }*/
+
+    @KafkaListener(topics = "user-created", groupId = "catalog-service")
+    public void consume(String payload) throws Exception {
+        UserCreatedEvent event = objectMapper.readValue(payload, UserCreatedEvent.class);
+        userOnboardUseCase.onUserCreated(event.id(), event.username(), event.email());
     }
 }

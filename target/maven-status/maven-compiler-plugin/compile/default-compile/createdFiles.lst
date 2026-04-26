@@ -1,6 +1,7 @@
 com\acme\catalog\domain\CatalogItem.class
 com\acme\catalog\adapters\in\kafka\UserCreatedConsumer.class
 com\acme\catalog\adapters\in\kafka\UserCreatedEvent.class
+com\acme\catalog\config\KafkaConsumerConfig.class
 com\acme\catalog\application\port\in\CreateItemCommand.class
 com\acme\catalog\adapters\out\persistence\CatalogRepositoryAdapter.class
 com\acme\catalog\CatalogApplication.class

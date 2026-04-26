@@ -1,3 +1,4 @@
+D:\aldo\catalog-service-spring\src\main\java\com\acme\catalog\config\KafkaConsumerConfig.java
 D:\aldo\catalog-service-spring\src\main\java\com\acme\catalog\CatalogApplication.java
 D:\aldo\catalog-service-spring\src\main\java\com\acme\catalog\domain\CatalogItem.java
 D:\aldo\catalog-service-spring\src\main\java\com\acme\catalog\adapters\in\kafka\UserCreatedEvent.java
