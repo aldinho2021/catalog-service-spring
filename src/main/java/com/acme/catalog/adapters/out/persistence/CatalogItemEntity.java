@@ -16,6 +16,9 @@ class CatalogItemEntity {
     @Column(nullable = false, updatable = false, columnDefinition = "uuid")
     private UUID id;
 
+    @Column(name = "source_user_id", unique = true)
+    private Long sourceUserId;
+
     @Column(nullable = false)
     private String title;
 
@@ -30,8 +33,8 @@ class CatalogItemEntity {
 
     static CatalogItemEntity fromDomain(CatalogItem item) {
         CatalogItemEntity e = new CatalogItemEntity();
-        // Evita IdentifierGenerationException cuando llega id null
         e.id = item.getId() != null ? item.getId() : UUID.randomUUID();
+        e.sourceUserId = item.getSourceUserId();
         e.title = item.getTitle();
         e.author = item.getAuthor();
         e.genre = item.getGenre();
@@ -40,6 +43,6 @@ class CatalogItemEntity {
     }
 
     CatalogItem toDomain() {
-        return new CatalogItem(id, title, author, genre, year);
+        return new CatalogItem(id, title, author, genre, year, sourceUserId);
     }
 }

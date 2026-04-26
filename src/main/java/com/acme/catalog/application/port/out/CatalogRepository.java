@@ -21,5 +21,7 @@ public interface CatalogRepository {
     void deleteById(UUID id);
 
     boolean existsById(UUID id);
+
+    Optional<CatalogItem> findBySourceUserId(Long sourceUserId);
 }
 

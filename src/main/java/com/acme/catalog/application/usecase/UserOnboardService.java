@@ -20,15 +20,21 @@ public class UserOnboardService implements UserOnboardUseCase {
     @Override
     @Transactional
     public void onUserCreated(Long userId, String username, String email) {
-        // Item inicial por defecto para usuario nuevo
+        if (catalogRepositoryPort.findBySourceUserId(userId).isPresent()) {
+            System.out.println("Evento ya procesado para userId=" + userId);
+            return;
+        }
+
         CatalogItem starter = new CatalogItem(
                 UUID.randomUUID(),
                 "Welcome Playlist",
                 username,
                 "Onboarding",
-                2026
+                2026,
+                userId
         );
+
         catalogRepositoryPort.save(starter);
-        System.out.println("Item inicial guardado para " + username);
+        System.out.println("Onboarding aplicado para userId=" + userId);
     }
 }

@@ -47,5 +47,10 @@ public class CatalogRepositoryAdapter implements CatalogRepository {
     public boolean existsById(UUID id) {
         return jpa.existsById(id);
     }
+
+    @Override
+    public Optional<CatalogItem> findBySourceUserId(Long sourceUserId) {
+        return jpa.findBySourceUserId(sourceUserId).map(CatalogItemEntity::toDomain);
+    }
 }
 

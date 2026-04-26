@@ -20,8 +20,8 @@ public class UserCreatedConsumer {
     public void consume(String payload) {
         try {
             UserCreatedEvent event = objectMapper.readValue(payload, UserCreatedEvent.class);
+            System.out.println("Evento user-created recibido para userId=" + event.id());
             userOnboardUseCase.onUserCreated(event.id(), event.username(), event.email());
-            System.out.println("Onboarding aplicado para userId=" + event.id());
         } catch (Exception e) {
             throw new RuntimeException("Error processing user-created event", e);
         }
